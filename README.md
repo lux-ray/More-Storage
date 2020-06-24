@@ -1,1 +1,11 @@
-# Minecraft-addon_More-Storage
+更多樣化的儲存空間，目前還在研究階段
+
+# 介紹
+1. 會移動的箱子(？?
+2. 客製化箱子(？？
+3. 把箱子當寵物(？？
+4. 讓箱子對苦力怕復仇(？？
+5. 以上這些都確認過能夠實現！！
+
+# 所有由我製作的東西
+https://github.com/Euxcbsks/Addon-made-by-Euxcbsks
