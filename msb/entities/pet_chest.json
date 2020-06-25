@@ -1,0 +1,166 @@
+{
+	"minecraft:entity": {
+		"format_version": "1.11.0",
+		"description": {
+			"identifier": "ms:pet_chest",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"ms:tameable": {
+				"minecraft:tameable": {
+					"tame_event": "ms:on_tame",
+					"tame_item": "planks"
+				}
+			},
+			"ms:is_tamed": {
+				"minecraft:behavior.follow_owner": {
+				},
+				"minecraft:is_tamed": {
+				},
+				"minecraft:attack": {
+					"damage": 2
+				},
+				"minecraft:movement": {
+					"value": 0.3
+				},
+				"minecraft:movement.basic": {},
+				"minecraft:navigation.walk": {
+					"avoid_water": true
+				},
+				"minecraft:jump.static": {},
+				"minecraft:can_climb": {},
+				"minecraft:interact": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{ "test": "is_family","subject": "other","value": "player" },
+									{ "test": "has_equipment","subject": "other","domain": "hand","value": "ms:wood_attack_upgrade" }
+								]
+							},
+							"event": "ms:equip_wood_attack_upgrade"
+						},
+						"interact_text": "action.interact.equip_upgrade",
+						"play_sounds": "equip_generic",
+						"swing": true,
+						"use_item": true
+					}
+				]
+			},
+			"ms:wood_attack_upgrade": {
+				"minecraft:attack": {
+					"damage": 5
+				},
+				"minecraft:interact": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{ "test": "is_family","subject": "other","value": "player" },
+									{ "test": "has_equipment","subject": "other","domain": "hand","value": "ms:upgrade_remover" }
+								]
+							},
+							"event": "ms:remove_wood_attack_upgrade"
+						},
+						"hurt_item": 1,
+						"interact_text": "action.interact.remove_upgrade",
+						"play_sounds": "block.grindstone.use",
+						"spawn_item": {
+							"table": "loot_tables/interact/wood_attack_upgrade.json"
+						},
+						"swing": true
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{ "test": "is_family","subject": "other","value": "player" },
+									{ "test": "has_equipment","subject": "other","domain": "hand","value": "stone_attack_upgrade" }
+								]
+							},
+							"event": "ms:equip_stone_attack_upgrade"
+						},
+						"interact_text": "action.interact.equip_upgrade",
+						"play_sounds": "equip_generic",
+						"swing": true,
+						"use_item": true
+					}
+				]
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"mob",
+					"petchest"
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0.7,
+				"height": 0.7
+			},
+			"minecraft:health": {
+				"value": 20,
+				"max": 20
+			},
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:inventory": {
+      	"can_be_siphoned_from": true,
+      	"inventory_size": 27
+      },
+			"minecraft:nameable": {
+			},
+			"minecraft:physics": {
+			},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      }
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"ms:tameable"
+					]
+				}
+			},
+			"ms:on_tame": {
+				"remove": {
+					"component_groups": [
+						"ms:tameable"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"ms:unlocked_pet_chest"
+					]
+				}
+			},
+			"ms:equip_wood_attack_upgrade": {
+				"add": {
+					"component_groups": [
+						"ms:wood_attack_upgrade"
+					]
+				}
+			},
+			"ms:remove_wood_attack_upgrade": {
+				"remove": {
+					"component_groups": [
+						"ms:wood_attack_upgrade"
+					]
+				}
+			}
+		}
+	}
+}
