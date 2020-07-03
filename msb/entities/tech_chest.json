@@ -38,6 +38,32 @@
 					"avoid_water": true
 				}
 			},
+			"ms:fire_immune": {
+				"minecraft:fire_immune": {
+				}
+			},
+			"ms:item_hopper": {
+				"minecraft:item_hopper": {
+				}
+			},
+			"ms:rail_movement": {
+				"minecraft:rail_movement": {
+				}
+			},
+			"ms:basic_movement": {
+				"minecraft:sittable": {
+				},
+				"minecraft:movement.basic": {
+				},
+				"minecraft:jump.static": {
+				},
+				"minecraft:can_climb": {
+				}
+			},
+			"ms:leashable": {
+				"minecraft:leashable": {
+				}
+			},
 			"ms:install_core": {
 				"minecraft:variant": {
 					"value": 0
@@ -228,16 +254,8 @@
 						"swing": true
 					}
 				],
-				"minecraft:sittable": {
-				},
 				"minecraft:movement": {
 					"value": 0.1
-				},
-				"minecraft:movement.basic": {
-				},
-				"minecraft:jump.static": {
-				},
-				"minecraft:can_climb": {
 				}
 			},
 			"ms:tech_chest_normal": {
@@ -388,16 +406,8 @@
 						"swing": true
 					}
 				],
-				"minecraft:sittable": {
-				},
 				"minecraft:movement": {
 					"value": 0.3
-				},
-				"minecraft:movement.basic": {
-				},
-				"minecraft:jump.static": {
-				},
-				"minecraft:can_climb": {
 				}
 			},
 			"ms:tech_chest_advanced": {
@@ -408,6 +418,159 @@
 					"value": 40,
 					"max": 40
 				},
+				"minecraft:interact": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"value": "ms:advanced_core"
+									}
+								]
+							},
+							"event": "ms:install_core_advanced"
+						},
+						"interact_text": "action.interact.upgrade_core",
+						"play_sounds": "block.grindstone.use",
+						"spawn_items": "loot_tables/tech_chest/normal_core.json",
+						"swing": true,
+						"use_item": true
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"value": "public"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"domain": "hand",
+										"value": "ms:key"
+									}
+								]
+							},
+							"event": "ms:lock_tech_chest"
+						},
+						"hurt_item": 1,
+						"interact_text": "action.interact.lock_tech_chest",
+						"play_sounds": "block.grindstone.use",
+						"swing": true
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"value": "private"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"domain": "hand",
+										"value": "ms:key"
+									}
+								]
+							},
+							"event": "ms:unlock_tech_chest"
+						},
+						"hurt_item": 1,
+						"interact_text": "action.interact.unlock_tech_chest",
+						"play_sounds": "block.grindstone.use",
+						"swing": true
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_component",
+										"value": "minecraft:navigation.walk"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"value": "ms:capability_switch_avoid_water"
+									}
+								]
+							},
+							"event": "ms:confront_water"
+						},
+						"interact_test": "action.interact.capability_off",
+						"play_sounds": "block.grindstone.use",
+						"swing": true
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_component",
+										"operator": "!=",
+										"value": "minecraft:navigation.walk"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"value": "capability_switch_avoid_water"
+									}
+								]
+							},
+							"event": "ms:avoid_water"
+						},
+						"interact_text": "action.interact.capability_on",
+						"play_sounds": "block.grindstone.use",
+						"swing": true
+					}
+				],
+				"minecraft:mob_effect": {
+					"filters": {
+						"any_of": [
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "player"
+							}
+						]
+					},
+					"effect_range": 16,
+					"effect_time": 15,
+					"mob_effect": [
+						"haste",
+						"strength",
+						"resistance"
+					]
+				},
 				"minecraft:movement": {
 					"value": 0.5
 				}
@@ -415,6 +578,222 @@
 			"ms:tech_chest_epic": {
 				"minecraft:variant": {
 					"value": 4
+				},
+				"minecraft:health": {
+					"value": 50,
+					"max": 50
+				},
+				"minecraft:interact": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"value": "ms:advanced_core"
+									}
+								]
+							},
+							"event": "ms:install_core_advanced"
+						},
+						"interact_text": "action.interact.upgrade_core",
+						"play_sounds": "block.grindstone.use",
+						"spawn_items": "loot_tables/tech_chest/normal_core.json",
+						"swing": true,
+						"use_item": true
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"value": "public"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"domain": "hand",
+										"value": "ms:key"
+									}
+								]
+							},
+							"event": "ms:lock_tech_chest"
+						},
+						"hurt_item": 1,
+						"interact_text": "action.interact.lock_tech_chest",
+						"play_sounds": "block.grindstone.use",
+						"swing": true
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"value": "private"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"domain": "hand",
+										"value": "ms:key"
+									}
+								]
+							},
+							"event": "ms:unlock_tech_chest"
+						},
+						"hurt_item": 1,
+						"interact_text": "action.interact.unlock_tech_chest",
+						"play_sounds": "block.grindstone.use",
+						"swing": true
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_component",
+										"value": "minecraft:navigation.walk"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"value": "ms:capability_switch_avoid_water"
+									}
+								]
+							},
+							"event": "ms:confront_water"
+						},
+						"interact_test": "action.interact.capability_off",
+						"play_sounds": "block.grindstone.use",
+						"swing": true
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_component",
+										"operator": "!=",
+										"value": "minecraft:navigation.walk"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"value": "ms:capability_switch_avoid_water"
+									}
+								]
+							},
+							"event": "ms:avoid_water"
+						},
+						"interact_text": "action.interact.capability_on",
+						"play_sounds": "block.grindstone.use",
+						"swing": true
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_component",
+										"operator": "!=",
+										"value": "minecraft:rail_movement"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"value": "ms:capability_switch_rail_movement"
+									}
+								]
+							},
+							"event": "ms:rail_movement_on"
+						},
+						"interact_text": "action.interact.capability_on",
+						"play_sounds": "block.grindstone.use",
+						"swing": true
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_component",
+										"value": "minecraft:rail_movement"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"value": "ms:capability_switch_rail_movement"
+									}
+								]
+							},
+							"event": "ms:rail_movement_off"
+						},
+						"interact_text": "action.interact.capability_off",
+						"play_sounds": "block.grindstone.use",
+						"swing": true
+					}
+				],
+				"minecraft:mob_effect": {
+					"filters": {
+						"any_of": [
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "player"
+							}
+						]
+					},
+					"effect_range": 32,
+					"effect_time": 30,
+					"mob_effect": [
+						"fire_resistance",
+						"haste",
+						"strength",
+						"regeneration",
+						"resistance",
+						"water_breathing"
+					]
+				},
+				"minecraft:movement": {
+					"value": 0.7
 				}
 			},
 			"ms:tech_chest_private": {
@@ -445,7 +824,22 @@
 			},
 			"minecraft:healable": {
 				"items": [
-					
+					{
+						"item": "ms:basic_repair_unit",
+						"heal_amount": 3
+					},
+					{
+						"item": "ms:normal_repair_unit",
+						"heal_amount": 5
+					},
+					{
+						"item": "ms:advanced_repair_unit",
+						"heal_amount": 7
+					},
+					{
+						"item": "ms:epic_repair_unit",
+						"heal_amount": 10
+					}
 				]
 			},
 			"minecraft:health": {
@@ -486,7 +880,8 @@
 								"ms:tameable",
 								"ms:lava_damage",
 								"ms:avoid_water",
-								"ms:tech_chest_basic"
+								"ms:tech_chest_basic",
+								"ms:basic_move"
 							]
 						}
 					},
@@ -497,6 +892,7 @@
 								"ms:tameable",
 								"ms:lava_damage",
 								"ms:avoid_water",
+								"ms:item_hopper",
 								"ms:tech_chest_normal"
 							]
 						}
@@ -506,9 +902,11 @@
 						"add": {
 							"component_groups": [
 								"ms:tameable",
-								"ms:lava_damage",
 								"ms:avoid_water",
-								"ms:tech_chest_advanced"
+								"ms:fire_immune",
+								"ms:item_hopper",
+								"ms:tech_chest_advanced",
+	
 							]
 						}
 					},
@@ -517,8 +915,9 @@
 						"add": {
 							"component_groups": [
 								"ms:tameable",
-								"ms:lava_damage",
 								"ms:avoid_water",
+								"ms:fire_immune",
+								"ms:item_hopper",
 								"ms:tech_chest_epic"
 							]
 						}
@@ -554,20 +953,23 @@
 				"add": {
 					"component_groups": [
 						"ms:tech_chest_normal",
-						"ms:avoid_water"
+						"ms:avoid_water",
+						"ms:item_hopper"
 					]
 				}
 			},
 			"ms:install_core_advanced": {
 				"remove": {
 					"component_groups": [
-						"ms:tech_chest_normal"
+						"ms:tech_chest_normal",
+						"ms:lava_damage"
 					]
 				},
 				"add": {
 					"component_groups": [
 						"ms:tech_chest_advanced",
-						"ms:avoid_water"
+						"ms:avoid_water",
+						"ms:fire_immune"
 					]
 				}
 			},
@@ -580,8 +982,7 @@
 				"add": {
 					"component_groups": [
 						"ms:tech_chest_epic",
-						"ms:avoid_water",
-						"ms:lava_damage"
+						"ms:avoid_water"
 					]
 				}
 			},
@@ -610,6 +1011,30 @@
 				"add": {
 					"component_groups": [
 						"ms:avoid_water"
+					]
+				}
+			},
+			"ms:rail_movement_on": {
+				"remove": {
+					"component_groups": [
+						"ms:basic_movement"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"ms:rail_movement"
+					]
+				}
+			},
+			"ms:rail_movement_off": {
+				"remove": {
+					"component_groups": [
+						"ms:rail_movement"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"ms:basic_movement"
 					]
 				}
 			}
