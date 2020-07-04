@@ -1,0 +1,27 @@
+action.interact.install_core=Install Core
+action.interact.upgrade_core=Upgrade Core
+action.interact.lock_tech_chest=Lock
+action.interact.unlock_tech_chest=Unlock
+action.interact.capability_off=Capability Off
+action.interact.capability_on=Capability On
+
+item.ms:capability_switch.name=Capability Switch
+item.ms:capability_switch_avoid_water=Capability Switch(aovid water)
+item.ms:capability_switch_rail_movement.name=Capability Switch(rail movement)
+
+item.ms:basic_core.name=Basic Core
+item.ms:normal_core.name=Normal Core
+item.ms:advanced_core.name=Advanced Core
+item.ms:epic_core.name=Epic Core
+
+item.ms:basic_repair_unit.name=Basic Repair Unit
+item.ms:normal_repair_unit.name=Normal Repair Unit
+item.ms:advanced_repair_unit.name=Advanced Repair Unit
+item.ms:epic_repair_unit.name=Epic Repair Unit
+
+item.ms:chest_binder.name=Tech Chest Binder
+item.ms:key.name=Key
+item.ms:spirit.name=Spirit
+item.ms:spirit_fragment.name=Spirit Fragment
+
+item.spawn_egg.entity.ms:tech_chest.name=Tech chest
