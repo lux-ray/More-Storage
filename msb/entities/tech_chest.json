@@ -368,7 +368,7 @@
 									{
 										"test": "has_equipment",
 										"subject": "other",
-										"value": "ms:capability_switch_avoid_water"
+										"value": "ms:capability_switch_level_1"
 									}
 								]
 							},
@@ -395,7 +395,60 @@
 									{
 										"test": "has_equipment",
 										"subject": "other",
-										"value": "capability_switch_avoid_water"
+										"value": "capability_switch_level_1"
+									}
+								]
+							},
+							"event": "ms:avoid_water"
+						},
+						"interact_text": "action.interact.capability_on",
+						"play_sounds": "block.grindstone.use",
+						"swing": true
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_component",
+										"value": "minecraft:navigation.walk"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"value": "ms:capability_switch_level_2"
+									}
+								]
+							},
+							"event": "ms:confront_water"
+						},
+						"interact_test": "action.interact.capability_off",
+						"play_sounds": "block.grindstone.use",
+						"swing": true
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_component",
+										"operator": "!=",
+										"value": "minecraft:navigation.walk"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"value": "ms:capability_switch_level_2"
 									}
 								]
 							},
@@ -515,7 +568,7 @@
 									{
 										"test": "has_equipment",
 										"subject": "other",
-										"value": "ms:capability_switch_avoid_water"
+										"value": "ms:capability_switch_level_1"
 									}
 								]
 							},
@@ -542,7 +595,60 @@
 									{
 										"test": "has_equipment",
 										"subject": "other",
-										"value": "capability_switch_avoid_water"
+										"value": "capability_switch_level_1"
+									}
+								]
+							},
+							"event": "ms:avoid_water"
+						},
+						"interact_text": "action.interact.capability_on",
+						"play_sounds": "block.grindstone.use",
+						"swing": true
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_component",
+										"value": "minecraft:navigation.walk"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"value": "ms:capability_switch_level_2"
+									}
+								]
+							},
+							"event": "ms:confront_water"
+						},
+						"interact_test": "action.interact.capability_off",
+						"play_sounds": "block.grindstone.use",
+						"swing": true
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_component",
+										"operator": "!=",
+										"value": "minecraft:navigation.walk"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"value": "ms:capability_switch_level_2"
 									}
 								]
 							},
@@ -656,7 +762,7 @@
 									{
 										"test": "has_equipment",
 										"subject": "other",
-										"value": "ms:capability_switch_avoid_water"
+										"value": "ms:capability_switch_level_1"
 									}
 								]
 							},
@@ -683,7 +789,60 @@
 									{
 										"test": "has_equipment",
 										"subject": "other",
-										"value": "ms:capability_switch_avoid_water"
+										"value": "ms:capability_switch_level_1"
+									}
+								]
+							},
+							"event": "ms:avoid_water"
+						},
+						"interact_text": "action.interact.capability_on",
+						"play_sounds": "block.grindstone.use",
+						"swing": true
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_component",
+										"value": "minecraft:navigation.walk"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"value": "ms:capability_switch_level_2"
+									}
+								]
+							},
+							"event": "ms:confront_water"
+						},
+						"interact_test": "action.interact.capability_off",
+						"play_sounds": "block.grindstone.use",
+						"swing": true
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_component",
+										"operator": "!=",
+										"value": "minecraft:navigation.walk"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"value": "ms:capability_switch_level_2"
 									}
 								]
 							},
@@ -710,7 +869,7 @@
 									{
 										"test": "has_equipment",
 										"subject": "other",
-										"value": "ms:capability_switch_rail_movement"
+										"value": "ms:capability_switch_level_2"
 									}
 								]
 							},
@@ -736,7 +895,7 @@
 									{
 										"test": "has_equipment",
 										"subject": "other",
-										"value": "ms:capability_switch_rail_movement"
+										"value": "ms:capability_switch_level_2"
 									}
 								]
 							},
