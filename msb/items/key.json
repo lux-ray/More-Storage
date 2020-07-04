@@ -1,0 +1,12 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ms:key"
+		},
+		"components": {
+			"minecraft:max_damage": 5000,
+			"minecraft:max_stack_size": 1
+		}
+	}
+}
