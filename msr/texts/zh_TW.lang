@@ -5,9 +5,8 @@ action.interact.unlock_tech_chest=解鎖
 action.interact.capability_off=停用特性
 action.interact.capability_on=啟用特性
 
-item.ms:capability_switch.name=特性切換器
-item.ms:capability_switch_avoid_water=特性切換器(迴避水)
-item.ms:capability_switch_rail_movement.name=特性切換器(軌道移動)
+item.ms:capability_switch_level_1=特性切換器(Level 1)
+item.ms:capability_switch_level_2=特性切換器(Level 2)
 
 item.ms:basic_core.name=基礎核心
 item.ms:normal_core.name=普通核心
