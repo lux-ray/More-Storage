@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "ms:capability_switch"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "",
+      "LCL",
+      "A E"
+    ],
+    "key": {
+    	"L": {
+    		"item": "minecraft:lever"
+    	},
+      "A": {
+        "item": "ms:advanced_core"
+      },
+      "E": {
+        "item": "ms:epic_core"
+      }
+    },
+    "result": {
+      "item": "ms:capability_switch"
+    }
+  }
+}
