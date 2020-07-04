@@ -1,12 +1,36 @@
 {
-	"format_version": "1.12.0",
-	"minecraft:item": {
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
 		"description": {
 			"identifier": "ms:capability_switch_level_2"
 		},
-		"components": {
-			"minecraft:hand_equipped": true,
-			"minecraft:max_stack_size": 1
-		}
+		"tags": [ "crafting_table" ],
+		"pattern": [
+			"SLS",
+			"SAS",
+			"S#S"
+		],
+		"key": {
+			"L": {
+				"item": "minecraft:lever"
+			},
+			"E": {
+				"item": "ms:epic_core"
+			},
+			"S": {
+				"item": "ms:spirit"
+			},
+			"#": {
+				"item": "ms:capability_switch_level_1"
+			}
+		},
+		"result": [
+			{
+				"item": "ms:capability_switch_level_2"
+			},
+			{
+				"item": "ms:advanced_core"
+			}
+		]
 	}
 }
