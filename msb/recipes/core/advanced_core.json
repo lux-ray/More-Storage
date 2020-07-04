@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "ms:advanced_core"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "GGG",
+      "GSG",
+      "GGG"
+    ],
+    "key": {
+      "S": {
+        "item": "ms:spirit"
+      },
+      "G": {
+        "item": "minecraft:gold_ingot"
+      }
+    },
+    "result": {
+      "item": "ms:advanced_core"
+    }
+  }
+}
