@@ -1,26 +1,25 @@
 {
-  "format_version": "1.12",
-  "minecraft:recipe_shaped": {
-    "description": {
-    "identifier": "ms:basic_core"
-    },
-
-    "tags": [ "crafting_table" ],
-    "pattern": [
-      "PPP",
-      "PSP",
-      "PPP"
-    ],
-    "key": {
-      "S": {
-        "item": "ms:spirit"
-      },
-      "P": {
-        "item": "minecraft:planks"
-      }
-    },
-    "result": {
-      "item": "ms:basic_core"
-    }
-  }
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:basic_core"
+		},
+		"tags": [ "crafting_table" ],
+		"pattern": [
+			"PPP",
+			"PSP",
+			"PPP"
+		],
+		"key": {
+			"S": {
+				"item": "ms:spirit"
+			},
+			"P": {
+				"item": "minecraft:planks"
+			}
+		},
+		"result": {
+			"item": "ms:basic_core"
+		}
+	}
 }

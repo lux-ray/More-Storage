@@ -1,26 +1,25 @@
 {
-  "format_version": "1.12",
-  "minecraft:recipe_shaped": {
-    "description": {
-    "identifier": "ms:epic_core_upgrade"
-    },
-
-    "tags": [ "crafting_table" ],
-    "pattern": [
-      "DDD",
-      "DCD",
-      "DDD"
-    ],
-    "key": {
-      "C": {
-        "item": "ms:advanced_core"
-      },
-      "D": {
-        "item": "minecraft:diamond"
-      }
-    },
-    "result": {
-      "item": "ms:epic_core"
-    }
-  }
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:epic_core_upgrade"
+		},
+		"tags": [ "crafting_table" ],
+		"pattern": [
+			"DDD",
+			"DCD",
+			"DDD"
+		],
+		"key": {
+			"C": {
+				"item": "ms:advanced_core"
+			},
+			"D": {
+				"item": "minecraft:diamond"
+			}
+		},
+		"result": {
+			"item": "ms:epic_core"
+		}
+	}
 }
