@@ -5,9 +5,8 @@ action.interact.unlock_tech_chest=Unlock
 action.interact.capability_off=Capability Off
 action.interact.capability_on=Capability On
 
-item.ms:capability_switch.name=Capability Switch
-item.ms:capability_switch_avoid_water=Capability Switch(aovid water)
-item.ms:capability_switch_rail_movement.name=Capability Switch(rail movement)
+item.ms:capability_switch_level_1=Capability Switch(Level 1)
+item.ms:capability_switch_level_2=Capability Switch(Level 2)
 
 item.ms:basic_core.name=Basic Core
 item.ms:normal_core.name=Normal Core
