@@ -1,29 +1,28 @@
-{
-  "format_version": "1.12",
-  "minecraft:recipe_shaped": {
-    "description": {
-    "identifier": "ms:capability_switch_level_1"
-    },
 
-    "tags": [ "crafting_table" ],
-    "pattern": [
-		"S S",
-		"SLS",
-		"SAS"
-    ],
-    "key": {
-    	"L": {
-    		"item": "minecraft:lever"
-    	},
-		"A": {
-			"item": "ms:advanced_core"
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ms:capability_switch_level_1"
 		},
-		"S": {
-			"item": "ms:spirit_fragment"
+		"tags": [ "crafting_table" ],
+		"pattern": [
+			"S S",
+			"SLS",
+			"SAS"
+		],
+		"key": {
+			"L": {
+				"item": "minecraft:lever"
+			},
+			"A": {
+				"item": "ms:advanced_core"
+			},
+			"S": {
+				"item": "ms:spirit_fragment"
+			}
+		},
+		"result": {
+			"item": "ms:capability_switch_level_1"
 		}
-    },
-    "result": {
-      "item": "ms:capability_switch_level_1"
-    }
-  }
+	}
 }
