@@ -1,0 +1,11 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "ms:furnace_steel"
+		},
+		"tags": ["blast_furnace"],
+		"input": "ms:iorn_charcoal_mixture",
+		"output": "ms:steel"
+	}  
+}
