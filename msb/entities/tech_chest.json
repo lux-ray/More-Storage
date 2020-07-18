@@ -1040,8 +1040,7 @@
 								"ms:avoid_water",
 								"ms:fire_immune",
 								"ms:item_hopper",
-								"ms:tech_chest_advanced",
-	
+								"ms:tech_chest_advanced"
 							]
 						}
 					},
