@@ -81,6 +81,9 @@
           "deals_damage": false
         }
       },
+      "minecraft:loot":{
+        "table": "loot_tables/entities/ender_dragon.json"
+      },
       "minecraft:on_start_landing": {
         "event": "minecraft:start_land",
         "target": "self"

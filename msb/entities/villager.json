@@ -402,6 +402,9 @@
           }
         ]
       },
+      "minecraft:loot":{
+        "table": "loot_tables/entities/villager.json"
+      },
       "minecraft:persistent": {
       },
       "minecraft:behavior.float": {

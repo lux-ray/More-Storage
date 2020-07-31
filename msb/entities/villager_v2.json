@@ -1386,6 +1386,9 @@
           }
         ]
       },
+      "minecraft:loot":{
+        "table": "loot_tables/entities/villager.json"
+      },
       "minecraft:hide": {
       },
       "minecraft:collision_box": {
